@@ -129,11 +129,6 @@
     scrollTrigger: { trigger: ".hero", start: "top top", end: "bottom top", scrub: true }
   });
 
-  /* diamond stack slow rotate */
-  gsap.to(".diamond-stack", {
-    rotate: 360, duration: 60, repeat: -1, ease: "none", transformOrigin: "50% 50%"
-  });
-
   /* ---------- Stat counters ---------- */
   startCounters(false);
 
