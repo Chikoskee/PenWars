@@ -91,9 +91,13 @@
     </div>
     <div class="about-visual reveal">
       <div class="about-video-frame">
-        <video class="about-video" autoplay muted loop playsinline poster="assets/penwars-logo.png">
+        <video class="about-video" id="aboutVideo" autoplay muted loop playsinline poster="assets/penwars-logo.png">
           <source src="assets/TPAanimation4.mp4" type="video/mp4">
         </video>
+        <button class="video-sound" id="videoSound" aria-label="Unmute video" aria-pressed="false">
+          <svg class="icon-muted" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M11 5 6 9H2v6h4l5 4V5z"/><line x1="23" y1="9" x2="17" y2="15"/><line x1="17" y1="9" x2="23" y2="15"/></svg>
+          <svg class="icon-sound" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M11 5 6 9H2v6h4l5 4V5z"/><path d="M15.5 8.5a5 5 0 0 1 0 7M19 5a9 9 0 0 1 0 14"/></svg>
+        </button>
       </div>
     </div>
   </div>

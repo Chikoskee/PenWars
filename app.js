@@ -196,3 +196,14 @@
     })();
   }
 })();
+
+(function(){
+  var vid=document.getElementById("aboutVideo");
+  var b=document.getElementById("videoSound");
+  if(vid&&b){b.addEventListener("click",function(){
+    vid.muted=!vid.muted;var on=!vid.muted;
+    if(on&&vid.paused){vid.play().catch(function(){});}
+    b.setAttribute("aria-pressed",on?"true":"false");
+    b.setAttribute("aria-label",on?"Mute video":"Unmute video");
+  });}
+})();
