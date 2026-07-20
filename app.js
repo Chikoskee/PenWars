@@ -82,8 +82,9 @@
   /* ---------- Ticker ---------- */
   gsap.to("#tickerTrack", { xPercent: -33.333, duration: 22, repeat: -1, ease: "none" });
 
-  /* ---------- Scroll reveals ---------- */
+  /* ---------- Scroll reveals (skip gallery cards; handled below) ---------- */
   gsap.utils.toArray(".reveal").forEach(function (el) {
+    if (el.classList.contains("hero-card")) return;
     gsap.fromTo(el,
       { opacity: 0, y: 54 },
       {
@@ -93,6 +94,30 @@
         scrollTrigger: { trigger: el, start: "top 86%" }
       });
   });
+
+  /* ---------- Heroes gallery: staggered subtle reveal ---------- */
+  var gallery = document.getElementById("heroGallery");
+  if (gallery) {
+    var cards = gallery.querySelectorAll(".hero-card");
+    gsap.fromTo(cards,
+      { opacity: 0, y: 60, scale: 0.92 },
+      {
+        opacity: 1, y: 0, scale: 1,
+        duration: 0.7,
+        ease: "power3.out",
+        stagger: { each: 0.09, from: "start" },
+        scrollTrigger: { trigger: gallery, start: "top 82%" }
+      });
+    /* gentle continuous float, alternating */
+    cards.forEach(function (c, i) {
+      gsap.to(c, {
+        y: i % 2 ? 8 : -8,
+        duration: 3 + (i % 4) * 0.35,
+        yoyo: true, repeat: -1, ease: "sine.inOut",
+        delay: 1 + i * 0.06
+      });
+    });
+  }
 
   /* hero glows parallax */
   gsap.to(".hero-glow-p", {
