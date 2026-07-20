@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<title>PenWars — Create, Vote & Build the Next Superhuman Universe</title>
+<meta name="description" content="PenWars is a worldwide creative battle show. Teams of artists and writers compete to create their country's hero for the Legion of Eccentrics universe.">
+<meta name="theme-color" content="#0B0712">
+<link rel="icon" type="image/png" href="assets/penwars-logo.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@400;600;700;800&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<!-- ══════════ PRELOADER ══════════ -->
+<div class="loader" id="loader" aria-hidden="true">
+  <img class="loader-logo" id="loaderLogo" src="assets/penwars-logo.png" alt="">
+  <div class="loader-bar"><span id="loaderBarFill"></span></div>
+</div>
+
+<!-- ══════════ NAV ══════════ -->
+<header class="nav" id="nav">
+  <a class="nav-logo" href="#top" aria-label="PenWars home">
+    <img src="assets/penwars-logo.png" alt="PenWars">
+  </a>
+  <nav class="nav-links" id="navLinks" aria-label="Main navigation">
+    <a href="#about">What is PenWars</a>
+    <a href="#how">How it works</a>
+    <a href="#prizes">Prizes</a>
+    <a href="#episode">Episode 1</a>
+    <a class="nav-cta" href="http://collabz.app/webapp" target="_blank" rel="noopener">Join the battle</a>
+  </nav>
+  <button class="nav-burger" id="navBurger" aria-label="Open menu" aria-expanded="false">
+    <span></span><span></span><span></span>
+  </button>
+</header>
+
+<main id="top">
+
+<!-- ══════════ HERO ══════════ -->
+<section class="hero" id="hero">
+  <div class="hero-glow hero-glow-p" aria-hidden="true"></div>
+  <div class="hero-glow hero-glow-g" aria-hidden="true"></div>
+  <div class="hero-grid" aria-hidden="true"></div>
+  <canvas class="hero-canvas" id="emberCanvas" aria-hidden="true"></canvas>
+
+  <div class="hero-diamond hd-1" aria-hidden="true"></div>
+  <div class="hero-diamond hd-2" aria-hidden="true"></div>
+  <div class="hero-diamond hd-3" aria-hidden="true"></div>
+  <div class="hero-diamond hd-4" aria-hidden="true"></div>
+
+  <div class="hero-inner">
+    <p class="hero-eyebrow" id="heroEyebrow"><span class="dot" aria-hidden="true"></span>A worldwide creative battle show</p>
+    <img class="hero-logo" id="heroLogo" src="assets/penwars-logo.png" alt="PenWars">
+    <h1 class="hero-title" id="heroTitle">Create. Vote. Build the next<br><span class="grad-gold">superhuman universe.</span></h1>
+    <p class="hero-sub" id="heroSub">Teams of creatives battle to create their country's hero for the Legion of Eccentrics — and the world decides who joins the canon.</p>
+    <div class="hero-ctas" id="heroCtas">
+      <a class="btn btn-gold" href="http://collabz.app/webapp" target="_blank" rel="noopener">Join Episode One
+        <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M3 8h9M8 3.5 12.5 8 8 12.5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </a>
+      <a class="btn btn-glass" href="https://thepenwars.com/watch-trailer" target="_blank" rel="noopener">
+        <svg width="14" height="14" viewBox="0 0 14 14" fill="currentColor" aria-hidden="true"><path d="M3 1.8v10.4L12 7 3 1.8Z"/></svg>
+        Watch the trailer
+      </a>
+    </div>
+  </div>
+
+  <div class="hero-scroll" aria-hidden="true"><span></span></div>
+</section>
+
+<!-- ══════════ TICKER ══════════ -->
+<div class="ticker" aria-hidden="true">
+  <div class="ticker-track" id="tickerTrack">
+    <span>Create <i>◆</i> Vote <i>◆</i> Battle <i>◆</i> Build <i>◆</i> Represent <i>◆</i> </span><span>Create <i>◆</i> Vote <i>◆</i> Battle <i>◆</i> Build <i>◆</i> Represent <i>◆</i> </span><span>Create <i>◆</i> Vote <i>◆</i> Battle <i>◆</i> Build <i>◆</i> Represent <i>◆</i> </span>
+  </div>
+</div>
+
+<!-- ══════════ WHAT IS PENWARS ══════════ -->
+<section class="section about" id="about">
+  <div class="wrap about-grid">
+    <div class="about-copy reveal">
+      <p class="kicker">What is PenWars</p>
+      <h2 class="h2">A global storytelling <span class="grad-purple">challenge</span></h2>
+      <p class="body-lg">PenWars brings fans, artists, and writers together to build the next generation of superhuman stories. Compete in creative challenges, work with professional creators, and help shape the <strong>Legion of Eccentrics</strong> universe.</p>
+      <blockquote class="quote">
+        “Art can help us understand our history, our culture, our lives, and the experience of others — in a way nothing else can.”
+      </blockquote>
+      <a class="btn btn-outline" href="https://www.legionofeccentrics.com/" target="_blank" rel="noopener">Explore the LOE universe</a>
+    </div>
+    <div class="about-visual reveal">
+      <div class="about-video-frame">
+        <video class="about-video" autoplay muted loop playsinline poster="assets/penwars-logo.png">
+          <source src="assets/TPAanimation4.mp4" type="video/mp4">
+        </video>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════ HOW IT WORKS ══════════ -->
+<section class="section how" id="how">
+  <div class="wrap">
+    <p class="kicker center">How it works</p>
+    <h2 class="h2 center">Three steps to <span class="grad-gold">battle</span></h2>
+    <div class="steps">
+      <article class="card step reveal">
+        <div class="step-num">01</div>
+        <h3 class="h3">Form or join a creative team</h3>
+        <p>Rally your artists and writers — or find a squad inside the community. Every team represents its culture.</p>
+      </article>
+      <article class="card step reveal">
+        <div class="step-num">02</div>
+        <h3 class="h3">Receive the challenge & create your character</h3>
+        <p>Each episode drops a creative brief. Design a hero that carries your country's story into the universe.</p>
+      </article>
+      <article class="card step reveal">
+        <div class="step-num">03</div>
+        <h3 class="h3">Submit your hero to the LOE universe</h3>
+        <p>The world votes. Winning heroes join the Legion of Eccentrics — canon, forever.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════ HEROES GALLERY ══════════ -->
+<section class="section heroes" id="heroes">
+  <div class="wrap">
+    <p class="kicker center">Meet the heroes</p>
+    <h2 class="h2 center">Created by the <span class="grad-purple">community</span></h2>
+    <p class="heroes-lead center">Every character below was born from a creative team representing its culture. This is the universe you help build.</p>
+    <div class="hero-gallery" id="heroGallery">
+      <figure class="hero-card reveal"><img src="assets/image3.png" alt="PenWars community hero" loading="lazy"></figure>
+      <figure class="hero-card reveal"><img src="assets/image17.png" alt="PenWars community hero" loading="lazy"></figure>
+      <figure class="hero-card reveal"><img src="assets/image35.png" alt="PenWars community hero" loading="lazy"></figure>
+      <figure class="hero-card reveal"><img src="assets/image25.png" alt="PenWars community hero" loading="lazy"></figure>
+      <figure class="hero-card reveal"><img src="assets/image30.png" alt="PenWars community hero" loading="lazy"></figure>
+      <figure class="hero-card reveal"><img src="assets/image64.png" alt="PenWars community hero" loading="lazy"></figure>
+      <figure class="hero-card reveal"><img src="assets/image36.png" alt="PenWars community hero" loading="lazy"></figure>
+      <figure class="hero-card reveal"><img src="assets/image76.png" alt="PenWars community hero" loading="lazy"></figure>
+      <figure class="hero-card reveal"><img src="assets/image51.png" alt="PenWars community hero" loading="lazy"></figure>
+      <figure class="hero-card reveal"><img src="assets/image27.png" alt="PenWars community hero" loading="lazy"></figure>
+      <figure class="hero-card reveal"><img src="assets/image46.png" alt="PenWars community hero" loading="lazy"></figure>
+      <figure class="hero-card reveal"><img src="assets/image66.png" alt="PenWars community hero" loading="lazy"></figure>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════ STATS ══════════ -->
+<section class="section stats" id="stats">
+  <div class="stats-glow" aria-hidden="true"></div>
+  <div class="wrap">
+    <p class="kicker center">Why a battle show?</p>
+    <h2 class="h2 center">Reality TV is a <span class="grad-purple">superpower</span></h2>
+    <div class="stats-row">
+      <div class="stat reveal">
+        <div class="stat-big grad-gold" data-count="4" data-suffix=" in 10">0 in 10</div>
+        <p>people watch some form of reality TV</p>
+      </div>
+      <div class="stat reveal">
+        <div class="stat-big grad-gold" data-count="27" data-suffix="%">0%</div>
+        <p>of Americans 18–29 say a reality star inspired them</p>
+      </div>
+      <div class="stat reveal">
+        <div class="stat-big grad-gold">1/10<sup>th</sup></div>
+        <p>built to franchise worldwide on a fraction of a typical TV budget</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════ PRIZES ══════════ -->
+<section class="section prizes" id="prizes">
+  <div class="wrap">
+    <p class="kicker center">What you can win</p>
+    <h2 class="h2 center">Glory. And <span class="grad-gold">loot.</span></h2>
+    <div class="prize-grid">
+      <article class="card prize reveal">
+        <div class="prize-icon" aria-hidden="true">
+          <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2l2.6 5.8 6.4.6-4.8 4.2 1.4 6.2L12 15.6 6.4 18.8l1.4-6.2L3 8.4l6.4-.6L12 2z"/></svg>
+        </div>
+        <h3 class="h3">Canon immortality</h3>
+        <p>Get your hero featured in the Legion of Eccentrics comic universe.</p>
+      </article>
+      <article class="card prize reveal">
+        <div class="prize-icon" aria-hidden="true">
+          <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M16 3l5 3-2.5 4H16v11H8V10H5.5L3 6l5-3a4 4 0 0 0 8 0z"/></svg>
+        </div>
+        <h3 class="h3">Merch & spotlights</h3>
+        <p>Win exclusive merch and creator spotlights across the community.</p>
+      </article>
+      <article class="card prize reveal">
+        <div class="prize-icon" aria-hidden="true">
+          <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="8.5"/><path d="M12 7.5v9M15 9.8c0-1.2-1.3-2-3-2s-3 .7-3 1.9c0 2.8 6 1.5 6 4.3 0 1.2-1.3 2-3 2s-3-.8-3-2"/></svg>
+        </div>
+        <h3 class="h3">Coins & tools</h3>
+        <p>Earn in-app coins, creator tools, and shout-outs on the show.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════ EPISODE CTA ══════════ -->
+<section class="section episode" id="episode">
+  <div class="wrap">
+    <div class="ep-banner reveal" id="epBanner">
+      <div class="ep-glow" aria-hidden="true"></div>
+      <span class="ep-badge"><span class="ep-pulse" aria-hidden="true"></span>Now live</span>
+      <h2 class="ep-title">Episode One<br><span class="grad-gold">is live.</span></h2>
+      <p class="ep-steps">Register on the <strong>Collabz app</strong> → pick the <strong>TV genre</strong> → <strong>PenWars</strong></p>
+      <a class="btn btn-gold btn-big" href="http://collabz.app/webapp" target="_blank" rel="noopener">Go to Collabz app
+        <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M3 8h9M8 3.5 12.5 8 8 12.5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </a>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<!-- ══════════ FOOTER ══════════ -->
+<footer class="footer">
+  <div class="wrap footer-inner">
+    <img class="footer-logo" src="assets/penwars-logo.png" alt="PenWars">
+    <p class="footer-tag">Teams of creatives battle to create their country's hero in a new worldwide superhuman universe.</p>
+    <nav class="footer-links" aria-label="Footer">
+      <a href="#about">What is PenWars</a>
+      <a href="#how">How it works</a>
+      <a href="https://thepenwars.com/watch-trailer" target="_blank" rel="noopener">Watch trailer</a>
+      <a href="https://www.legionofeccentrics.com/" target="_blank" rel="noopener">Legion of Eccentrics</a>
+    </nav>
+    <div class="footer-social">
+      <a href="https://facebook.com" target="_blank" rel="noopener" aria-label="Facebook">Fb</a>
+      <a href="https://x.com" target="_blank" rel="noopener" aria-label="X">X</a>
+      <a href="https://youtube.com" target="_blank" rel="noopener" aria-label="YouTube">Yt</a>
+      <a href="https://instagram.com" target="_blank" rel="noopener" aria-label="Instagram">Ig</a>
+    </div>
+    <p class="footer-legal">Terms & Conditions · Privacy Policy · © 2026 PenWars. All rights reserved.</p>
+  </div>
+</footer>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
